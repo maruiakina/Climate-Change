@@ -1,0 +1,587 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Rou Qu(rq44), Xin Dang(xd76), Cassie Wang(yw775)</title>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<style>
+			body {
+				text-align: center;
+				font-family: Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial," sans-serif";
+			}
+
+			div {
+				margin-top: 20px;
+				margin-bottom: 30px;
+			}	
+
+			h1 {
+				color: Dimgrey;
+				font-size: 20px;
+			   margin-left: 65px;}
+
+			p {
+				font-size: 17px;
+				margin-left: 65px;
+			   margin-right:65px;}
+
+			}
+			
+			.grid line {
+			  stroke: lightgrey;
+			  stroke-opacity: 0.15;
+			  shape-rendering: crispEdges;
+			}
+
+			.grid path {
+			  stroke-width: 0;
+			}
+			
+			.ocean_axis path {
+				display: none;
+			}
+			
+			.description_temperature, .description_ocean, .description_greenland, .description_antarctica {
+				display: inline-block;
+				margin-bottom: 50px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="description">
+			<h1 style="text-align:left">El Niño-Southern Oscillation (ENSO) cycle</h1>
+	    	<p style="text-align:left">El Niño and La Niña are opposite phases of what is known as the El Niño-Southern Oscillation (ENSO) cycle. The ENSO cycle describes the fluctuations in temperature between the ocean and atmosphere in the east-central Equatorial Pacific. <br><br>
+
+	    	La Niña is sometimes referred to as the cold phase of ENSO and El Niño as the warm phase of ENSO. Both La Niña and El Niño can have large-scale impacts not only on ocean processes, but also on global weather and climate.
+	   		</p>
+	    </div>
+	    <div class="container" id="figure1"></div>
+		
+		<div class="description" style="margin-top: 100px;">
+			<h1 style="text-align:left">Land Ice and Sea Level</h1>
+	    	<p style="text-align:left">Data from NASA's GRACE satellites show that the land ice sheets in both Antarctica and Greenland are losing mass.<br><br>
+	    	Sea level rise is caused primarily by two factors related to global warming: the added water from melting land ice and the expansion of sea water as it warms. 
+	   		</p>
+	    </div>
+		<div class="container" id="figure2"></div>
+
+		<div class="script">
+			<script>
+				var width = 1000,
+					height = 550,
+					// padding for the top space
+					topPadding = 80
+					// padding all other around
+					padding = 50;
+				
+				// to change the labels of x-axis from 1,950 to 1950 
+				var formatYear = d3.format("d");
+
+				// create svg for figure1
+				var climateChart = d3.select("#figure1")
+	                .append("svg")
+	                .attr("width", width)
+	                .attr("height", height);
+
+				<!--Climate 1950-2016-->
+	
+				var climateData;
+				// load data from climatev2.json
+				d3.json("climatev2.json", function(error, data) {
+					climateData = data;
+
+					// create yearScale
+					var yearScale = d3.scaleLinear().domain([1950, 2016])
+						.range([padding, width - padding]);
+
+					// create intensityScale
+					var intensityScale = d3.scaleLinear().domain([-2, 2])
+						.range([height - padding, topPadding]);
+
+					// seperate the color from "El Niño" from "La Niña"
+					var nameScale = d3.scaleOrdinal().domain(["El Niño", "La Niña"]).range(["#4682B4", "#FFD700"]);
+
+					// set the resultScare to represtn the indensity level
+					var resultScale = function (d) {
+						if (d.type == "Weak") { 
+							return 0.3;
+						} else if (d.type == "Moderate") {
+							return 0.5;
+						} else if (d.type == "Strong") {
+							return 0.8;
+						} else {
+							return 1.0;
+						}
+					};
+
+					// print out the bar graph that represent the "El Niño" from "La Niña" year condition
+					climateData.forEach(function (d) {
+						if (d.name === "El Niño") {
+						climateChart.append("line")
+						.attr("x1", yearScale(d.year) + 5) 
+						.attr("y1", 266) 
+						.attr("x2", yearScale(d.year) + 5) 
+						.attr("y2", intensityScale(d.intensity))
+						.style("stroke", nameScale(d.name))
+						.style("stroke-width", 10)
+						.style("opacity", resultScale(d));
+						} else {
+						climateChart.append("line")
+						.attr("x1", yearScale(d.year) + 5) 
+						.attr("y1", 266) 
+						.attr("x2", yearScale(d.year) + 5) 
+						.attr("y2", intensityScale(d.intensity))
+						.style("stroke", nameScale(d.name))
+						.style("stroke-width", 10)
+						.style("opacity", resultScale(d));
+						}
+					});
+
+				});
+				
+				// First Line graph for temperature change
+				var tempChange;
+				d3.json("temperaturechange.json", function (error, data) {
+				tempChange = data;
+
+				// find the extent value in year to define the domain
+				var xDomain = d3.extent(data, function(d) {return d.Year});
+
+				var xScale = d3.scaleLinear()
+				 			.domain(xDomain)
+				 			.range([padding, width - padding]);
+
+				var yScale = d3.scaleLinear()
+							.domain([-1, 1])
+							.range([height - padding, topPadding]);
+				
+				// add x-axis	
+				var xAxis = d3.axisBottom(xScale).tickSize([3]).tickFormat(formatYear);
+					climateChart.append("g").attr("transform", "translate(0,450)")
+					.call(xAxis);
+
+				// add y-axis
+				var yAxis = d3.axisLeft(yScale).tickSize([3]);
+					climateChart.append("g").attr("transform", "translate(50,0)")
+					.call(yAxis);
+
+				// draw the line graph that represent the temperature change
+				var pathGenerator= d3.line()
+                   .x(function(d) { return xScale(d.Year); })
+                   .y(function(d) { return yScale(d.Annual); });
+
+                climateChart.append("path")
+		        	.attr("fill", "none")
+		        	.attr("stroke", "Coral")
+		        	.attr("stroke-width", 3)
+		        	.attr("d", pathGenerator(tempChange));
+
+		        // draw the gridlines
+		        function make_y_gridlines() {		
+				    return d3.axisLeft(yScale)
+				        .ticks(5)
+				}
+
+			  	climateChart.append("g")			
+			      .attr("class", "grid")
+			      .attr("transform", "translate(50, 0)")
+			      .call(make_y_gridlines()
+			          .tickSize(-920)
+			          .tickFormat("")
+			      )
+				});
+
+				// add the y-axis lable to the graph
+				climateChart.append("text")
+				       .attr("transform", "rotate(-90)")
+				       .attr("y", 2)
+				       .attr("x",0 - (height / 2))
+				       .attr("dy", "1em")
+				       .style("text-anchor", "middle")
+				       .attr("font-size","15px")
+				       .text("Temperature Change (Degrees Celsius)");
+				
+				// add tittle for the first graph
+				climateChart.append("text")
+					   .attr("x", 500 )
+				       .attr("y", 50 )
+				       .style("text-anchor", "middle")
+				       .attr("font-size","20px")
+				       .style('fill', 'Dimgrey')
+				       .text("El Niño-Southern Oscillation cycle VS Temperature Change");
+
+				// legend text for temperature change
+				climateChart.append("text")
+					   .attr("x", 710)
+				       .attr("y", 495)
+				       .attr("dy", "1.0em")
+				       .attr("font-size","12px")
+				       .style("text-anchor", "left")
+				       .style('fill', 'grey')
+				       .text("Temperature Change:");
+
+				climateChart.append("rect")       
+					    .attr("x", 710)         
+					    .attr("y", 510)          
+					    .attr("height", 3)    
+					    .attr("width", 150)
+					    .style("fill", "Coral");
+				
+//				El Nino color change
+				var defsElnino = climateChart.append("defs");
+				
+//				Append linearGradient element to the defs
+				var linearGradientNino = defsElnino.append("linearGradient")
+					.attr("id", "linear-gradientNino");
+				
+				linearGradientNino.selectAll("stop")
+					.data([
+					{offset: "0%", color: "#FFF3B3"},
+					{offset: "33%", color: "#FFEB80"},
+					{offset: "66%", color: "#FFDF33"},
+					{offset: "100%", color: "#FFD700"}
+				])
+					.enter().append("stop")
+						.attr("offset", function(d) { return d.offset; })
+						.attr("stop-color", function(d) { return d.color; });
+				
+				climateChart.append("text")
+				       .attr("x",150) 
+				       .attr("y", 495)
+				       .attr("dy", "1.0em")
+				       .attr("font-size","12px")
+				       .style('fill', 'grey')
+				       .style("text-anchor", "left")
+				       .text("El Niño:");
+
+				climateChart.append("rect")       
+					    .attr("x", 150)         
+					    .attr("y", 510)          
+					    .attr("height", 10)    
+					    .attr("width", 150)
+					    .style("fill", "url(#linear-gradientNino)");
+				
+				climateChart.append("text")
+						.attr("x", 150)
+				        .attr("y", 520)
+				       	.attr("dy", "1.0em")
+				       	.style('fill', 'grey')
+				       	.attr("font-size","10px")
+				       	.style("text-anchor", "left")
+				       	.text("Weak");
+				
+				climateChart.append("text")
+						.attr("x", 270)
+				        .attr("y", 520)
+				       	.attr("dy", "1.0em")
+				       	.style('fill', 'grey')
+				       	.attr("font-size","10px")
+				       	.style("text-anchor", "left")
+				       	.text("Very Strong");
+				
+//				La Nina color change
+				var defsLanina = climateChart.append("defs");
+				
+//				Append linearGradient element to the defs
+				var linearGradientNina = defsElnino.append("linearGradient")
+					.attr("id", "linear-gradientNina");
+				
+				linearGradientNina.selectAll("stop")
+					.data([
+					{offset: "0%", color: "#C8DAE9"},
+					{offset: "50%", color: "#A3C1DA"},
+					{offset: "100%", color: "#6B9BC3"}
+				])
+					.enter().append("stop")
+						.attr("offset", function(d) { return d.offset; })
+						.attr("stop-color", function(d) { return d.color; });
+				
+				climateChart.append("text")
+						.attr("x", 430)
+				        .attr("y", 495)
+				       	.attr("dy", "1.0em")
+				       	.style('fill', 'grey')
+				       	.attr("font-size","12px")
+				       	.style("text-anchor", "left")
+				       	.text("La Niña:");
+
+			    climateChart.append("rect")       
+					    .attr("x", 430)         
+					    .attr("y", 510)          
+					    .attr("height", 10)    
+					    .attr("width", 150)
+					    .style("fill", "url(#linear-gradientNina)");
+				
+				climateChart.append("text")
+						.attr("x", 430)
+				        .attr("y", 520)
+				       	.attr("dy", "1.0em")
+				       	.style('fill', 'grey')
+				       	.attr("font-size","10px")
+				       	.style("text-anchor", "left")
+				       	.text("Weak");
+				
+				climateChart.append("text")
+						.attr("x", 565)
+				        .attr("y", 520)
+				       	.attr("dy", "1.0em")
+				       	.style('fill', 'grey')
+				       	.attr("font-size","10px")
+				       	.style("text-anchor", "left")
+				       	.text("Strong");
+				
+			</script>
+			<script>
+				var width = 1000,
+					height = 500,
+					padding = 50;
+				
+				var massChart = d3.select("#figure2")
+					.append("svg")
+					.attr("width", width)
+					.attr("height", height);
+
+//				define common time scale for both chart
+				var timeScale = d3.scaleLinear()
+					.domain([2002.29, 2016.21])
+					.range([padding, width - padding]);
+				var timeFormat = d3.format("d");	
+
+				var timeAxis = d3.axisBottom(timeScale).tickSize([3]).tickFormat(timeFormat);
+					massChart.append("g")
+						.attr("class", "axis")
+						.attr("transform", "translate(0, 470)")
+						.call(timeAxis);
+				
+//				Load data for iceberg mass
+				var iceberg;
+				d3.json("iceberg.json", function(error, data) {
+
+					iceberg = data;
+
+					var iceScale = d3.scaleLinear()
+						.range([470, 70]);
+
+					var center = d3.scaleLinear()
+						.range([padding, width - padding]);
+
+					var color = d3.scaleOrdinal()
+						.range(["#008080", "#66C0B7"]);
+
+					var iceAxis = d3.axisLeft(iceScale).tickSize([3]);
+					
+					var centerLine = d3.axisTop(center).ticks(0);
+
+					var keys = d3.keys(data[0]);
+					
+//					stacked bar chart reference: https://bl.ocks.org/WillTurman/9c4142944f6132855fd318350f552b7b
+//					filter out unused key
+					var keys = keys.filter(function(key) {
+						if (key != "Year") {
+							return key;
+						}
+					});
+					
+//					define different cases for negative and positive values
+					iceberg.forEach(function(d) {
+						var y0_positive = 0;
+						var y0_negative = 0;
+
+						d.components = keys.map(function(key) {
+							if (d[key] >= 0) {
+								return {key: key, y1: y0_positive, y0: y0_positive += d[key] };
+							} else if (d[key] < 0) {
+								return {key: key, y0: y0_negative, y1: y0_negative += d[key] };
+							}
+						})
+					});
+
+					var y_min = (d3.min(iceberg, function(d) { return d.Greenland }) + d3.min(data, function(d) { return d.Antarctica }));
+					var y_max = (d3.max(iceberg, function(d) { return d.Greenland }) + d3.max(data, function(d) { return d.Antarctica }));
+					
+//					make sure there is space at the bottom
+					iceScale.domain([y_min - 100, y_max]);
+
+					massChart.append("g")
+						.attr("class", "axis")
+						.attr("transform", "translate(50, 0)")
+						.call(iceAxis);
+
+					massChart.append("g")
+						.attr("class", "axis")
+						.attr("transform", "translate(0," + iceScale(0) + ")")
+						.call(centerLine);
+					
+//					define each element's x position
+					var entry = massChart.selectAll(".entry")
+						.data(iceberg)
+						.enter().append("g")
+						.attr("class", "g")
+						.attr("transform", function(d) { return "translate(" + timeScale(d.Year) + ", 0)"; });
+					
+//					append rect for data
+					entry.selectAll("rect")
+						.data(function(d) { return d.components; })
+						.enter().append("rect")
+						.attr("width", 3)
+						.attr("y", function(d) { return iceScale(d.y0); })
+						.attr("height", function(d) { return Math.abs(iceScale(d.y0) - iceScale(d.y1)); })
+						.style("fill", function(d) { return color(d.key); });
+
+				});	
+				
+				var ocean;		
+				d3.json("ocean.json", function(error, data) {
+					ocean = data;
+
+					var oceanScale = d3.scaleLinear()
+					.domain([-6, 26])
+					.range([470, 70]);
+
+					var oceanAxis = d3.axisRight(oceanScale).tickSize([3]).ticks(5);
+					massChart.append("g")
+						.attr("class", "ocean_axis")
+						.attr("transform", "translate(950, 0)")
+						.call(oceanAxis);
+
+					var oceanArea = d3.area()
+					.x(function(d) { return timeScale(d.Year)})
+					.y0(470)
+					.y1(function(d) { return oceanScale(d.Ocean)});
+
+					massChart.append("path")
+						.attr("id", "ocean")
+						.attr("d", oceanArea(ocean))
+						.style("fill", "steelblue")
+						.style("opacity", .5);
+
+					// add images for ocean like fish, coral, and seaweeds.
+					massChart.append("svg:image")
+		                .attr(
+		                "xlink:href", "http://www.msqq.com/d/file/icon/2014-04-01/aad3b15c54fc53b6690606ecb5688036.png")
+		                .attr("width", 90)
+                        .attr("height",90)
+                        .attr("transform", "translate(580, 360)");
+
+                    massChart.append("svg:image")
+		                .attr(
+		                "xlink:href", "https://maxcdn.icons8.com/Share/icon/color/Animals//koi_fish1600.png")
+		                .attr("width", 90)
+                        .attr("height",90)
+                        .attr("transform", "translate(480, 360)");
+
+		            massChart.append("svg:image")
+				                .attr(
+				                "xlink:href", "https://img.clipartfest.com/41b00e61365512c308b001403401b993_seaweed20clipart-seaweed-clipart-png_299-231.png")
+				                .attr("width", 60)
+		                        .attr("height",60)
+		                        .attr("transform", "translate(410, 417)");	
+
+		            massChart.append("svg:image")
+				                .attr(
+				                "xlink:href", "http://www.uprightnj.com/Coral.png")
+				                .attr("width", 200)
+		                        .attr("height",200)
+		                        .attr("transform", "translate(650, 352)");		
+
+ 					 massChart.append("svg:image")
+					            .attr(
+					            "xlink:href", "http://img08.deviantart.net/135c/i/2015/107/1/1/coral_png_3_by_irisustockimages-d7jxmcv.png")
+					            .attr("width", 80)
+			                    .attr("height",80)
+			                    .attr("transform", "translate(350, 412)");			
+				});
+				
+//				add title for the chart
+				massChart.append("text")
+					   .attr("x", 500 )
+				       .attr("y", 50 )
+				       .style("text-anchor", "middle")
+				       .attr("font-size","20px")
+				       .style('fill', 'Dimgrey')
+				       .text("Iceberg VS Ocean Mass Change");
+			
+//				add axis labels
+				massChart.append("text")
+					.attr("x",40)
+					.attr("y", 65)
+					.style("text-anchor", "middle")
+					.style("font-size", 13)
+					.text("Gt/yr (Iceberg)");
+				
+				massChart.append("text")
+					.attr("x",920)
+					.attr("y", 65)
+					.style("text-anchor", "middle")
+					.style("font-size", 13)
+					.text("molecular mass/yr (Ocean)");
+				
+//				add legend for both graphs
+				massChart.append("rect")
+					.attr("x", 750)
+					.attr("y", 90)
+					.attr("width", 15)
+					.attr("height", 15)
+					.style("fill", "#A3C1DA");
+				
+				massChart.append("text")
+					.attr("x", 770)
+					.attr("y", 101)
+					.attr("text-anchor", "left")
+					.attr("font-size", 12)
+					.text("Ocean");
+				
+				massChart.append("rect")
+					.attr("x", 750)
+					.attr("y", 110)
+					.attr("width", 15)
+					.attr("height", 15)
+					.style("fill", "#008080");
+				
+				massChart.append("text")
+					.attr("x", 770)
+					.attr("y", 121)
+					.attr("text-anchor", "left")
+					.attr("font-size", 12)
+					.text("Greenland");
+				
+				massChart.append("rect")
+					.attr("x", 750)
+					.attr("y", 130)
+					.attr("width", 15)
+					.attr("height", 15)
+					.style("fill", "#66C0B7");
+				
+				massChart.append("text")
+					.attr("x", 770)
+					.attr("y", 141)
+					.attr("text-anchor", "left")
+					.attr("font-size", 12)
+					.text("Antarctica");
+				
+			</script>
+		</div>
+		
+		
+		<div class="container">
+		<p>Rate of Change by the End of 2016</p>
+			<div class="description_temperature">
+				<p class="title">Temperature Trend:</p>
+				<p style="color:#FF7F50">+1.7&deg;F</p>
+			</div>
+			<div class="description_ocean">
+				<p class="title">Sea Level Trend:</p>
+				<p style="color:#A3C1DA">+3.4mm/yr</p>
+			</div>
+			<div class="description_greenland">
+				<p class="title">Greenland Trend:</p>
+				<p style="color:#008080">-281 Gt/yr</p>
+			</div>
+			<div class="description_antarctica">
+				<p class="title">Antarctica Trend:</p>
+				<p style="color:#66C0B7">-118 Gt/yr</p>
+			</div>
+		</div>
+	</body>
+</html>

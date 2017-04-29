@@ -1,0 +1,762 @@
+[
+ {
+   "Year": 2002.29,
+   "Greenland": 1635.26,
+   "Antarctica": 665.87
+ },
+ {
+   "Year": 2002.35,
+   "Greenland": 1652.14,
+   "Antarctica": 726.89
+ },
+ {
+   "Year": 2002.62,
+   "Greenland": 1396.59,
+   "Antarctica": 488.62
+ },
+ {
+   "Year": 2002.71,
+   "Greenland": 1368.19,
+   "Antarctica": 832.9
+ },
+ {
+   "Year": 2002.79,
+   "Greenland": 1360.86,
+   "Antarctica": 698.03
+ },
+ {
+   "Year": 2002.87,
+   "Greenland": 1394.23,
+   "Antarctica": 583.83
+ },
+ {
+   "Year": 2002.96,
+   "Greenland": 1453.89,
+   "Antarctica": 614.1
+ },
+ {
+   "Year": 2003.04,
+   "Greenland": 1473.7,
+   "Antarctica": 414.78
+ },
+ {
+   "Year": 2003.12,
+   "Greenland": 1468.03,
+   "Antarctica": 496.29
+ },
+ {
+   "Year": 2003.2,
+   "Greenland": 1559.51,
+   "Antarctica": 425.7
+ },
+ {
+   "Year": 2003.29,
+   "Greenland": 1613.1,
+   "Antarctica": 520.52
+ },
+ {
+   "Year": 2003.36,
+   "Greenland": 1640.37,
+   "Antarctica": 633.98
+ },
+ {
+   "Year": 2003.54,
+   "Greenland": 1444.64,
+   "Antarctica": 524.28
+ },
+ {
+   "Year": 2003.62,
+   "Greenland": 1280.32,
+   "Antarctica": 545.2
+ },
+ {
+   "Year": 2003.71,
+   "Greenland": 1222.59,
+   "Antarctica": 615.42
+ },
+ {
+   "Year": 2003.79,
+   "Greenland": 1242.97,
+   "Antarctica": 580.39
+ },
+ {
+   "Year": 2003.87,
+   "Greenland": 1284.06,
+   "Antarctica": 556.85
+ },
+ {
+   "Year": 2003.96,
+   "Greenland": 1276.94,
+   "Antarctica": 581.23
+ },
+ {
+   "Year": 2004.02,
+   "Greenland": 1252.82,
+   "Antarctica": 445.87
+ },
+ {
+   "Year": 2004.13,
+   "Greenland": 1267.97,
+   "Antarctica": 60.15
+ },
+ {
+   "Year": 2004.21,
+   "Greenland": 1296.26,
+   "Antarctica": 342.11
+ },
+ {
+   "Year": 2004.29,
+   "Greenland": 1391.45,
+   "Antarctica": 252.91
+ },
+ {
+   "Year": 2004.37,
+   "Greenland": 1370.9,
+   "Antarctica": 566.43
+ },
+ {
+   "Year": 2004.46,
+   "Greenland": 1315.39,
+   "Antarctica": 564.14
+ },
+ {
+   "Year": 2004.54,
+   "Greenland": 1231.31,
+   "Antarctica": 332.61
+ },
+ {
+   "Year": 2004.62,
+   "Greenland": 1097.9,
+   "Antarctica": 301.88
+ },
+ {
+   "Year": 2004.71,
+   "Greenland": 1100.18,
+   "Antarctica": 377.33
+ },
+ {
+   "Year": 2004.79,
+   "Greenland": 1024.57,
+   "Antarctica": 741.62
+ },
+ {
+   "Year": 2004.87,
+   "Greenland": 1077.97,
+   "Antarctica": 482.33
+ },
+ {
+   "Year": 2004.96,
+   "Greenland": 1068.05,
+   "Antarctica": 435.87
+ },
+ {
+   "Year": 2005.04,
+   "Greenland": 1075.58,
+   "Antarctica": 341.72
+ },
+ {
+   "Year": 2005.12,
+   "Greenland": 1168.67,
+   "Antarctica": 285.56
+ },
+ {
+   "Year": 2005.2,
+   "Greenland": 1217.29,
+   "Antarctica": 303.04
+ },
+ {
+   "Year": 2005.29,
+   "Greenland": 1236.66,
+   "Antarctica": 388.58
+ },
+ {
+   "Year": 2005.37,
+   "Greenland": 1209.88,
+   "Antarctica": 378.83
+ },
+ {
+   "Year": 2005.46,
+   "Greenland": 1172.8,
+   "Antarctica": 467.99
+ },
+ {
+   "Year": 2005.54,
+   "Greenland": 1054.3,
+   "Antarctica": 536.36
+ },
+ {
+   "Year": 2005.62,
+   "Greenland": 880.54,
+   "Antarctica": 321.99
+ },
+ {
+   "Year": 2005.71,
+   "Greenland": 795.74,
+   "Antarctica": 555.11
+ },
+ {
+   "Year": 2005.79,
+   "Greenland": 741.93,
+   "Antarctica": 544.01
+ },
+ {
+   "Year": 2005.87,
+   "Greenland": 755.34,
+   "Antarctica": 566.72
+ },
+ {
+   "Year": 2005.96,
+   "Greenland": 877.68,
+   "Antarctica": 527.45
+ },
+ {
+   "Year": 2006.04,
+   "Greenland": 881.97,
+   "Antarctica": 349.62
+ },
+ {
+   "Year": 2006.12,
+   "Greenland": 947.65,
+   "Antarctica": 325.25
+ },
+ {
+   "Year": 2006.2,
+   "Greenland": 977.91,
+   "Antarctica": 368.09
+ },
+ {
+   "Year": 2006.29,
+   "Greenland": 914.01,
+   "Antarctica": 358.26
+ },
+ {
+   "Year": 2006.37,
+   "Greenland": 925.18,
+   "Antarctica": 485.8
+ },
+ {
+   "Year": 2006.45,
+   "Greenland": 964.58,
+   "Antarctica": 510.43
+ },
+ {
+   "Year": 2006.54,
+   "Greenland": 861.03,
+   "Antarctica": 467.9
+ },
+ {
+   "Year": 2006.62,
+   "Greenland": 708.41,
+   "Antarctica": 667.05
+ },
+ {
+   "Year": 2006.71,
+   "Greenland": 603.82,
+   "Antarctica": 652.51
+ },
+ {
+   "Year": 2006.79,
+   "Greenland": 631.47,
+   "Antarctica": 588.48
+ },
+ {
+   "Year": 2006.87,
+   "Greenland": 652.91,
+   "Antarctica": 501
+ },
+ {
+   "Year": 2006.96,
+   "Greenland": 666.74,
+   "Antarctica": 420.83
+ },
+ {
+   "Year": 2007.04,
+   "Greenland": 703.44,
+   "Antarctica": 213.52
+ },
+ {
+   "Year": 2007.12,
+   "Greenland": 714.6,
+   "Antarctica": 237.56
+ },
+ {
+   "Year": 2007.2,
+   "Greenland": 703.14,
+   "Antarctica": 210.59
+ },
+ {
+   "Year": 2007.29,
+   "Greenland": 736.7,
+   "Antarctica": 308.35
+ },
+ {
+   "Year": 2007.37,
+   "Greenland": 755.94,
+   "Antarctica": 594.16
+ },
+ {
+   "Year": 2007.45,
+   "Greenland": 750.56,
+   "Antarctica": 395.05
+ },
+ {
+   "Year": 2007.54,
+   "Greenland": 552.44,
+   "Antarctica": 368.52
+ },
+ {
+   "Year": 2007.62,
+   "Greenland": 334.67,
+   "Antarctica": 441
+ },
+ {
+   "Year": 2007.71,
+   "Greenland": 275.47,
+   "Antarctica": 466.86
+ },
+ {
+   "Year": 2007.79,
+   "Greenland": 308.41,
+   "Antarctica": 288.89
+ },
+ {
+   "Year": 2007.87,
+   "Greenland": 313.77,
+   "Antarctica": 195.87
+ },
+ {
+   "Year": 2007.96,
+   "Greenland": 370.27,
+   "Antarctica": 194.76
+ },
+ {
+   "Year": 2008.04,
+   "Greenland": 377.72,
+   "Antarctica": -50.47
+ },
+ {
+   "Year": 2008.12,
+   "Greenland": 400.14,
+   "Antarctica": -11.7
+ },
+ {
+   "Year": 2008.21,
+   "Greenland": 479.87,
+   "Antarctica": 4.56
+ },
+ {
+   "Year": 2008.29,
+   "Greenland": 458.74,
+   "Antarctica": 149.11
+ },
+ {
+   "Year": 2008.37,
+   "Greenland": 382.75,
+   "Antarctica": 144.97
+ },
+ {
+   "Year": 2008.46,
+   "Greenland": 385.35,
+   "Antarctica": 179.73
+ },
+ {
+   "Year": 2008.54,
+   "Greenland": 239.89,
+   "Antarctica": -100.61
+ },
+ {
+   "Year": 2008.62,
+   "Greenland": 77.87,
+   "Antarctica": -157.22
+ },
+ {
+   "Year": 2008.71,
+   "Greenland": 51.84,
+   "Antarctica": 124.74
+ },
+ {
+   "Year": 2008.79,
+   "Greenland": 45.24,
+   "Antarctica": 127.74
+ },
+ {
+   "Year": 2008.87,
+   "Greenland": 117.57,
+   "Antarctica": 187.84
+ },
+ {
+   "Year": 2008.96,
+   "Greenland": 157.89,
+   "Antarctica": 91.24
+ },
+ {
+   "Year": 2009.04,
+   "Greenland": 220.43,
+   "Antarctica": -18.44
+ },
+ {
+   "Year": 2009.12,
+   "Greenland": 237.36,
+   "Antarctica": 22.34
+ },
+ {
+   "Year": 2009.2,
+   "Greenland": 174.13,
+   "Antarctica": 71.16
+ },
+ {
+   "Year": 2009.29,
+   "Greenland": 153.86,
+   "Antarctica": 87.16
+ },
+ {
+   "Year": 2009.37,
+   "Greenland": 170.36,
+   "Antarctica": 91.57
+ },
+ {
+   "Year": 2009.46,
+   "Greenland": 230.72,
+   "Antarctica": 92.75
+ },
+ {
+   "Year": 2009.54,
+   "Greenland": 153.92,
+   "Antarctica": 117.01
+ },
+ {
+   "Year": 2009.62,
+   "Greenland": -25.12,
+   "Antarctica": 113.09
+ },
+ {
+   "Year": 2009.71,
+   "Greenland": -165.36,
+   "Antarctica": 119.35
+ },
+ {
+   "Year": 2009.79,
+   "Greenland": -139.77,
+   "Antarctica": 115.9
+ },
+ {
+   "Year": 2009.87,
+   "Greenland": -142.52,
+   "Antarctica": 75.4
+ },
+ {
+   "Year": 2009.96,
+   "Greenland": -33.35,
+   "Antarctica": 76.14
+ },
+ {
+   "Year": 2010.04,
+   "Greenland": -69.99,
+   "Antarctica": -182.02
+ },
+ {
+   "Year": 2010.12,
+   "Greenland": -75.37,
+   "Antarctica": -7.58
+ },
+ {
+   "Year": 2010.2,
+   "Greenland": -24.84,
+   "Antarctica": 41.86
+ },
+ {
+   "Year": 2010.29,
+   "Greenland": -50.28,
+   "Antarctica": -42.01
+ },
+ {
+   "Year": 2010.37,
+   "Greenland": -25.58,
+   "Antarctica": -64.34
+ },
+ {
+   "Year": 2010.45,
+   "Greenland": -85.93,
+   "Antarctica": -145.97
+ },
+ {
+   "Year": 2010.54,
+   "Greenland": -301.3,
+   "Antarctica": -408.24
+ },
+ {
+   "Year": 2010.62,
+   "Greenland": -517.79,
+   "Antarctica": -290.05
+ },
+ {
+   "Year": 2010.71,
+   "Greenland": -663.02,
+   "Antarctica": -178.22
+ },
+ {
+   "Year": 2010.79,
+   "Greenland": -609.32,
+   "Antarctica": -272.55
+ },
+ {
+   "Year": 2010.87,
+   "Greenland": -600.95,
+   "Antarctica": -266.11
+ },
+ {
+   "Year": 2010.96,
+   "Greenland": -547.4,
+   "Antarctica": -126.61
+ },
+ {
+   "Year": 2011.13,
+   "Greenland": -557.14,
+   "Antarctica": -369.77
+ },
+ {
+   "Year": 2011.2,
+   "Greenland": -513.63,
+   "Antarctica": -423.72
+ },
+ {
+   "Year": 2011.29,
+   "Greenland": -497.74,
+   "Antarctica": -474.14
+ },
+ {
+   "Year": 2011.37,
+   "Greenland": -497.7,
+   "Antarctica": -354.52
+ },
+ {
+   "Year": 2011.55,
+   "Greenland": -743.41,
+   "Antarctica": -372.36
+ },
+ {
+   "Year": 2011.62,
+   "Greenland": -923.74,
+   "Antarctica": -289.59
+ },
+ {
+   "Year": 2011.71,
+   "Greenland": -1002.58,
+   "Antarctica": -163.33
+ },
+ {
+   "Year": 2011.79,
+   "Greenland": -973.47,
+   "Antarctica": -250.43
+ },
+ {
+   "Year": 2011.83,
+   "Greenland": -1038.39,
+   "Antarctica": 51.31
+ },
+ {
+   "Year": 2012,
+   "Greenland": -1015,
+   "Antarctica": -284.91
+ },
+ {
+   "Year": 2012.04,
+   "Greenland": -1001.64,
+   "Antarctica": -403.53
+ },
+ {
+   "Year": 2012.12,
+   "Greenland": -965.87,
+   "Antarctica": -425.25
+ },
+ {
+   "Year": 2012.21,
+   "Greenland": -876.47,
+   "Antarctica": -361.26
+ },
+ {
+   "Year": 2012.27,
+   "Greenland": -835.34,
+   "Antarctica": -381.25
+ },
+ {
+   "Year": 2012.46,
+   "Greenland": -916.81,
+   "Antarctica": -365.03
+ },
+ {
+   "Year": 2012.54,
+   "Greenland": -1154.14,
+   "Antarctica": -533.24
+ },
+ {
+   "Year": 2012.62,
+   "Greenland": -1439.64,
+   "Antarctica": -324.38
+ },
+ {
+   "Year": 2012.7,
+   "Greenland": -1528.69,
+   "Antarctica": -71.56
+ },
+ {
+   "Year": 2012.89,
+   "Greenland": -1502.05,
+   "Antarctica": -144.67
+ },
+ {
+   "Year": 2012.96,
+   "Greenland": -1471.66,
+   "Antarctica": -333.26
+ },
+ {
+   "Year": 2013.04,
+   "Greenland": -1453.51,
+   "Antarctica": -556.65
+ },
+ {
+   "Year": 2013.12,
+   "Greenland": -1401.78,
+   "Antarctica": -666.27
+ },
+ {
+   "Year": 2013.3,
+   "Greenland": -1432.57,
+   "Antarctica": -453.22
+ },
+ {
+   "Year": 2013.37,
+   "Greenland": -1399.88,
+   "Antarctica": -330.94
+ },
+ {
+   "Year": 2013.46,
+   "Greenland": -1370.26,
+   "Antarctica": -326.18
+ },
+ {
+   "Year": 2013.54,
+   "Greenland": -1496.31,
+   "Antarctica": -423.1
+ },
+ {
+   "Year": 2013.79,
+   "Greenland": -1592.15,
+   "Antarctica": -406.99
+ },
+ {
+   "Year": 2013.87,
+   "Greenland": -1533.52,
+   "Antarctica": -553.58
+ },
+ {
+   "Year": 2013.96,
+   "Greenland": -1544.43,
+   "Antarctica": -498.4
+ },
+ {
+   "Year": 2014.02,
+   "Greenland": -1515.03,
+   "Antarctica": -760.57
+ },
+ {
+   "Year": 2014.21,
+   "Greenland": -1490.14,
+   "Antarctica": -942.97
+ },
+ {
+   "Year": 2014.29,
+   "Greenland": -1475.91,
+   "Antarctica": -723.27
+ },
+ {
+   "Year": 2014.37,
+   "Greenland": -1456.64,
+   "Antarctica": -590.98
+ },
+ {
+   "Year": 2014.45,
+   "Greenland": -1489.96,
+   "Antarctica": -818.03
+ },
+ {
+   "Year": 2014.62,
+   "Greenland": -1811.98,
+   "Antarctica": -869.08
+ },
+ {
+   "Year": 2014.71,
+   "Greenland": -1855.86,
+   "Antarctica": -591.3
+ },
+ {
+   "Year": 2014.79,
+   "Greenland": -1809.51,
+   "Antarctica": -721.97
+ },
+ {
+   "Year": 2014.88,
+   "Greenland": -1775.17,
+   "Antarctica": -659.58
+ },
+ {
+   "Year": 2015.06,
+   "Greenland": -1709.83,
+   "Antarctica": -1026.33
+ },
+ {
+   "Year": 2015.12,
+   "Greenland": -1638.4,
+   "Antarctica": -1034.55
+ },
+ {
+   "Year": 2015.2,
+   "Greenland": -1627.13,
+   "Antarctica": -1145.44
+ },
+ {
+   "Year": 2015.29,
+   "Greenland": -1629.1,
+   "Antarctica": -1163.47
+ },
+ {
+   "Year": 2015.32,
+   "Greenland": -1639.41,
+   "Antarctica": -1073.69
+ },
+ {
+   "Year": 2015.53,
+   "Greenland": -1841.11,
+   "Antarctica": -1201.4
+ },
+ {
+   "Year": 2015.62,
+   "Greenland": -1995.83,
+   "Antarctica": -1270.77
+ },
+ {
+   "Year": 2015.7,
+   "Greenland": -1975.08,
+   "Antarctica": -1113.5
+ },
+ {
+   "Year": 2015.97,
+   "Greenland": -1964.97,
+   "Antarctica": -963.36
+ },
+ {
+   "Year": 2016.04,
+   "Greenland": -1941.22,
+   "Antarctica": -932.79
+ },
+ {
+   "Year": 2016.12,
+   "Greenland": -1914.86,
+   "Antarctica": -1012.44
+ },
+ {
+   "Year": 2016.21,
+   "Greenland": -1904.7,
+   "Antarctica": -841.65
+ }
+]

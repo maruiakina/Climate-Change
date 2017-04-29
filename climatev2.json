@@ -1,0 +1,272 @@
+[
+ {
+   "name": "La Nina",
+   "year": 1950,
+   "intensity": -0.383333333,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1951,
+   "intensity": 0.541666667,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1952,
+   "intensity": 0.408333333,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1953,
+   "intensity": 0.35,
+   "type": "Weak"
+ },
+ {
+   "name": "La Nina",
+   "year": 1954,
+   "intensity": -0.616666667,
+   "type": "Weak"
+ },
+ {
+   "name": "La Nina",
+   "year": 1955,
+   "intensity": -0.841666667,
+   "type": "Moderate"
+ },
+ {
+   "name": "El Nino",
+   "year": 1957,
+   "intensity": 1.158333333,
+   "type": "Strong"
+ },
+ {
+   "name": "El Nino",
+   "year": 1958,
+   "intensity": 0.383333333,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1963,
+   "intensity": 0.541666667,
+   "type": "Moderate"
+ },
+ {
+   "name": "La Nina",
+   "year": 1964,
+   "intensity": -0.358333333,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1965,
+   "intensity": 1.1,
+   "type": "Strong"
+ },
+ {
+   "name": "La Nina",
+   "year": 1967,
+   "intensity": -0.366666667,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1968,
+   "intensity": 0.633333333,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1969,
+   "intensity": 0.458333333,
+   "type": "Weak"
+ },
+ {
+   "name": "La Nina",
+   "year": 1970,
+   "intensity": -0.933333333,
+   "type": "Moderate"
+ },
+ {
+   "name": "La Nina",
+   "year": 1971,
+   "intensity": -0.35,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1972,
+   "intensity": 0.991666667,
+   "type": "Strong"
+ },
+ {
+   "name": "La Nina",
+   "year": 1973,
+   "intensity": -1.35,
+   "type": "Strong"
+ },
+ {
+   "name": "La Nina",
+   "year": 1974,
+   "intensity": -0.583333333,
+   "type": "Weak"
+ },
+ {
+   "name": "La Nina",
+   "year": 1975,
+   "intensity": -1,
+   "type": "Strong"
+ },
+ {
+   "name": "El Nino",
+   "year": 1976,
+   "intensity": 0.491666667,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1977,
+   "intensity": 0.325,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1979,
+   "intensity": 0.416666667,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1982,
+   "intensity": 1.475,
+   "type": "Very Strong"
+ },
+ {
+   "name": "La Nina",
+   "year": 1983,
+   "intensity": -0.375,
+   "type": "Weak"
+ },
+ {
+   "name": "La Nina",
+   "year": 1984,
+   "intensity": -0.641666667,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1986,
+   "intensity": 0.891666667,
+   "type": "Moderate"
+ },
+ {
+   "name": "El Nino",
+   "year": 1987,
+   "intensity": 0.616666667,
+   "type": "Moderate"
+ },
+ {
+   "name": "La Nina",
+   "year": 1988,
+   "intensity": -1.2,
+   "type": "Strong"
+ },
+ {
+   "name": "El Nino",
+   "year": 1991,
+   "intensity": 1.083333333,
+   "type": "Moderate"
+ },
+ {
+   "name": "El Nino",
+   "year": 1994,
+   "intensity": 0.525,
+   "type": "Weak"
+ },
+ {
+   "name": "La Nina",
+   "year": 1995,
+   "intensity": -0.6,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 1997,
+   "intensity": 1.55,
+   "type": "Very Strong"
+ },
+ {
+   "name": "La Nina",
+   "year": 1998,
+   "intensity": -1.1,
+   "type": "Moderate"
+ },
+ {
+   "name": "La Nina",
+   "year": 1999,
+   "intensity": -1.141666667,
+   "type": "Moderate"
+ },
+ {
+   "name": "La Nina",
+   "year": 2000,
+   "intensity": -0.533333333,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 2002,
+   "intensity": 0.658333333,
+   "type": "Moderate"
+ },
+ {
+   "name": "El Nino",
+   "year": 2004,
+   "intensity": 0.566666667,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 2006,
+   "intensity": 0.35,
+   "type": "Weak"
+ },
+ {
+   "name": "La Nina",
+   "year": 2007,
+   "intensity": -0.933333333,
+   "type": "Moderate"
+ },
+ {
+   "name": "El Nino",
+   "year": 2009,
+   "intensity": 0.716666667,
+   "type": "Moderate"
+ },
+ {
+   "name": "La Nina",
+   "year": 2010,
+   "intensity": -0.966666667,
+   "type": "Moderate"
+ },
+ {
+   "name": "La Nina",
+   "year": 2011,
+   "intensity": -0.558333333,
+   "type": "Weak"
+ },
+ {
+   "name": "El Nino",
+   "year": 2015,
+   "intensity": 1.525,
+   "type": "Very Strong"
+ },
+ {
+   "name": "La Nina",
+   "year": 2016,
+   "intensity": -0.666666667,
+   "type": "Weak"
+ }
+]
